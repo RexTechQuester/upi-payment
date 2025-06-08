@@ -9,32 +9,45 @@
       font-family: Arial, sans-serif;
       padding: 40px;
       text-align: center;
+      background: #f9f9f9;
     }
-    button {
+    a.pay-button {
       font-size: 18px;
       padding: 14px 24px;
       background-color: #1e88e5;
       color: white;
-      border: none;
       border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
       cursor: pointer;
+      margin-top: 20px;
+    }
+    a.pay-button:hover {
+      background-color: #1565c0;
+    }
+    p.note {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
 <body>
   <h2>Pay ₹3500 for Cozy Room</h2>
-  <p>Tap the button below to open your UPI app</p>
+  <p>Tap the button below to open your UPI app.</p>
 
-  <button onclick="launchUPI()">Pay Now</button>
+  <a class="pay-button" href="upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR" target="_self" rel="noopener noreferrer">
+    Pay Now
+  </a>
 
-  <script>
-    function launchUPI() {
-      window.location.href = "upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR";
-    }
-  </script>
-
-  <p style="margin-top: 30px; font-size: 14px; color: gray;">
-    Having trouble? Open this page in your browser, not in WhatsApp.
+  <p class="note">
+    If tapping the button doesn't open your UPI app, please:<br/>
+    1. Tap the menu in WhatsApp (⋮) and choose <strong>Open in Browser</strong>.<br/>
+    2. Then tap the button again.<br/>
+    This is a limitation of WhatsApp’s in-app browser.
   </p>
 </body>
 </html>
