@@ -3,19 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Redirecting to UPI App</title>
-  <script>
-    window.onload = function () {
-      setTimeout(function () {
-        window.location.href = "upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR";
-      }, 300);
-    };
-  </script>
+  <title>Pay via UPI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      text-align: center;
+    }
+    button {
+      font-size: 18px;
+      padding: 14px 24px;
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h2>Redirecting to your UPI app...</h2>
-  <p>If you are not redirected automatically, 
-    <a href="upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR">click here to pay</a>.
+  <h2>Pay ₹3500 for Cozy Room</h2>
+  <p>Tap the button below to open your UPI app</p>
+
+  <button onclick="launchUPI()">Pay Now</button>
+
+  <script>
+    function launchUPI() {
+      window.location.href = "upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR";
+    }
+  </script>
+
+  <p style="margin-top: 30px; font-size: 14px; color: gray;">
+    Having trouble? Open this page in your browser, not in WhatsApp.
   </p>
 </body>
 </html>
