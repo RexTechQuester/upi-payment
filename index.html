@@ -3,51 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pay via UPI</title>
+  <title>Pay for Cozy Room - UPI Payment</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      text-align: center;
-      background: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
     }
-    a.pay-button {
-      font-size: 18px;
-      padding: 14px 24px;
-      background-color: #1e88e5;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-    a.pay-button:hover {
-      background-color: #1565c0;
-    }
-    p.note {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
+    .container {
+      background: white;
       max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
+      width: 100%;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #1e88e5;
+      margin-bottom: 12px;
+    }
+    p.description {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+      color: #555;
+    }
+    .qr-code {
+      max-width: 250px;
+      width: 80%;
+      margin-bottom: 24px;
+      border: 8px solid #1e88e5;
+      border-radius: 12px;
+      background: white;
+    }
+    .upi-info {
+      font-size: 18px;
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #222;
+    }
+    .amount {
+      font-size: 20px;
+      font-weight: 700;
+      color: #388e3c;
+      margin-bottom: 24px;
+    }
+    .footer-note {
+      font-size: 14px;
+      color: #999;
+      margin-top: 32px;
+      line-height: 1.4;
     }
   </style>
 </head>
 <body>
-  <h2>Pay ₹3500 for Cozy Room</h2>
-  <p>Tap the button below to open your UPI app.</p>
+  <div class="container">
+    <h1>Cozy Room Payment</h1>
+    <p class="description">
+      Thank you for choosing Cozy Rooms — where comfort meets convenience!  
+      Your stay promises relaxing spaces, warm hospitality, and a peaceful atmosphere to unwind and recharge.
+    </p>
 
-  <a class="pay-button" href="upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR" target="_self" rel="noopener noreferrer">
-    Pay Now
-  </a>
+    <img src="qr-code.png" alt="UPI QR Code" class="qr-code" />
 
-  <p class="note">
-    If tapping the button doesn't open your UPI app, please:<br/>
-    1. Tap the menu in WhatsApp (⋮) and choose <strong>Open in Browser</strong>.<br/>
-    2. Then tap the button again.<br/>
-    This is a limitation of WhatsApp’s in-app browser.
-  </p>
+    <div class="upi-info">
+      UPI ID: <strong>9179957709@ybl</strong>
+    </div>
+    <div class="amount">
+      Amount: ₹3500
+    </div>
+
+    <p class="footer-note">
+      To pay, scan the QR code with your UPI app or use the UPI ID above.<br />
+      For best experience, open this page in your phone’s default browser.
+    </p>
+  </div>
 </body>
 </html>
