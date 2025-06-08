@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Redirecting to UPI Payment</title>
+  <title>Redirecting to UPI App</title>
   <script>
-    window.onload = function() {
-      // Redirect to UPI payment link
-      window.location.href = "upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR";
+    window.onload = function () {
+      setTimeout(function () {
+        window.location.href = "upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR";
+      }, 300);
     };
   </script>
 </head>
 <body>
   <h2>Redirecting to your UPI app...</h2>
-  <p>If you are not redirected automatically, <a href="upi://pay?pa=test123@ybl&pn=Cozy%20Room&am=3500&cu=INR">click here to pay</a>.</p>
+  <p>If you are not redirected automatically, 
+    <a href="upi://pay?pa=9179957709@ybl&pn=Cozy%20Room&am=3500&cu=INR">click here to pay</a>.
+  </p>
 </body>
 </html>
